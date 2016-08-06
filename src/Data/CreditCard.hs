@@ -1,4 +1,5 @@
 {-# LANGUAGE MultiWayIf #-}
+{-# LANGUAGE DeriveGeneric #-}
 module Data.CreditCard
     ( classifyCard
     , CreditCard(..)
@@ -8,6 +9,7 @@ module Data.CreditCard
     ) where
 
 import Data.Char
+import GHC.Generics
 
 data CardIssuer
   = AmericanExpress
