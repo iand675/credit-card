@@ -18,7 +18,7 @@ data CardIssuer
   | Maestro
   | Discover
   | Unknown -- ^ Unfortunately there are a number of card types processed with the MasterCard system that do not live in MasterCard’s IIN range (numbers starting 51...55); the most important case is that of Maestro cards, many of which have been issued from other banks’ IIN ranges and so are located all over the number space. As a result, it may be best to assume that any card that is not of some other type you accept must be a MasterCard.
-  deriving (Show, Generic)
+  deriving (Eq, Show, Generic)
 
 data ClassificationFailure
   = TooShort
